@@ -1,0 +1,25 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "Library with tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alexguners/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "javascript",
+    "library"
+  ],
+  "author": "Alex P Oliveira <alexpkodi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexguners/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/alexguners/js-tdd-course#readme"
+}
