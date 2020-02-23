@@ -4,8 +4,11 @@
   "description": "Library with tdd",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint src/*.js"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register ",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch --require babel-register ",
+    "lint": "npx eslint src/*.js",
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open"
   },
   "repository": {
     "type": "git",
@@ -27,15 +30,29 @@
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "mocha": "^7.0.1",
+    "ramda": "^0.27.0",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack-cli": "^3.3.11"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "express": "^4.17.1",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.6"
+  },
   "husky": {
     "hooks": {
       "pre-push": "npm run lint"

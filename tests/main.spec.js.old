@@ -1,0 +1,29 @@
+/* eslint-disable no-undef */
+const expect = require('chai').expect;
+
+describe('Class A', () => {
+  let arr;
+
+  beforeEach(() => {
+    arr = [1, 2, 3];
+  });
+
+  it('should be an array', () => {
+    expect(arr).to.be.an('array');
+  });
+
+  it('should have a lenght 4 when push one value to array', () => {
+    arr.push(4);
+    expect(arr).to.have.length(4);
+  });
+
+  it('should remove the number 3 when use pop in array ', () => {
+    arr.pop();
+    expect(arr).to.not.include(3);
+  });
+
+  it('should have size of 2 when pop a value from array', () => {
+    arr.pop();
+    expect(arr).to.have.length(2);
+  });
+});
